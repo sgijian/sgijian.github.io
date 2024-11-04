@@ -19,6 +19,11 @@
     {
       "username": "a",
       "password": "123456"
+    },
+    {
+      "username": "b",
+      "email": "824628865@qq.com",
+      "password": "123456"
     }
   ]
 }
