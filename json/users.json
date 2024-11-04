@@ -1,12 +1,17 @@
 {
-    "users": [
-      {
-        "username": "xlw",
-        "password": "123456"
-      },
-      {
-        "username": "user",
-        "password": "password"
-      }
-    ]
-  }
+  "users": [
+    {
+      "username": "xlw",
+      "password": "123456"
+    },
+    {
+      "username": "user",
+      "password": "password"
+    },
+    {
+      "username": "李四",
+      "email": "824628865@qq.com",
+      "password": "123456"
+    }
+  ]
+}
