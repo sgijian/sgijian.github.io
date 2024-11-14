@@ -24,6 +24,11 @@
       "username": "b",
       "email": "824628865@qq.com",
       "password": "123456"
+    },
+    {
+      "username": "666",
+      "email": "824628865@qq.com",
+      "password": "66"
     }
   ]
 }
