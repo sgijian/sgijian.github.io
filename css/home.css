@@ -1,90 +1,287 @@
+/* home.css */
+
+* {
+    font-family: 'SimSun', '宋体', sans-serif;
+}
+
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(70%); /* 调整视频亮度，使其不那么刺眼 */
+}
+
+/* 模态框背景 */
+.modal-backdrop.show {
+    opacity: 1; /* 背景虚化效果 */
+}
+
+/* 模态框内容 */
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1050;
+    font-family: 'SimSun', '宋体', sans-serif;
+    box-shadow: 0 0 50px rgba(111, 0, 255, 0.75);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#typedText {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; /* 居中对齐 */
+}
+
+/* 导航栏 */
 .navbar {
     background-color: #000000e1;
     color: #fff;
     display: flex;
     align-items: center;
     padding: 5px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
 }
 
-.navbar .nav-content {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.navbar .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.navbar .nav-links {
-    display: flex;
-    align-items: center;
+.navbar .navbar-toggler {
+    border: none;
+    outline: none;
 }
 
-.navbar .nav-links span {
+.navbar .navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #000000;
     margin-right: 20px;
-    cursor: pointer;
+    transition: color 0.3s ease-in-out;
 }
 
-.navbar .search-form {
-    display: flex;
-    align-items: center;
+.navbar .navbar-nav .nav-link:hover {
+    color: #ffcc00;
 }
 
-.navbar .search-form input {
-    margin-right: 10px;
-}
-.dropdown-menu a {
-    color: #333;
-}
-.dropdown-menu a:hover {
-    background-color: #f8f9fa;
+.navbar .dropdown-menu {
+    background-color: #000000e1;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.navbar .dropdown-menu a {
+    color: #fff;
+}
 
+.navbar .dropdown-menu a:hover {
+    background-color: #333;
+}
+
+/* 侧边栏 */
 .sidebar {
-    width: 150px;
-    height: 200px;
+    width: 200px;
+    height: 50%;
+    margin-left: 20px;
     background-color: #f8f9fa;
     border-left: 1px solid #dee2e6;
     padding: 20px;
+    /* 移除从左侧滑入动画 */
 }
 
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
+.sidebar form {
+    display: flex;
+    flex-direction: column;
 }
 
-.sidebar li {
-    margin-bottom: 10px;
+.sidebar .form-group {
+    margin-bottom: 15px;
 }
 
-.sidebar a {
-    text-decoration: none;
-    color: #000;
+.sidebar label {
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
+.sidebar input,
+.sidebar textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.sidebar button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sidebar button:hover {
+    background-color: #0056b3;
+}
+
+/* 容器 */
 .container {
-    width: 75%;
+    width: 100%;
     padding: 30px 0;
-    margin: 10px 150px;
+    margin: 10px 20px 10px 150px;
     display: flex;
 }
 
 .content-col {
     flex: 1;
-    margin-right: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* 均匀分布方块 */
+    margin-top: 0; /* 减少顶部外边距，使内容更接近巨幕 */
 }
 
-.content-col:last-child {
-    margin-right: 0;
+.content-col .col-6.col-lg-4 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 20px; /* 保持内边距 */
+    margin: 10px; /* 增加四周外边距 */
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 初始阴影效果 */
+    flex-basis: calc(33.333% - 20px); /* 每个方块占据三分之一的宽度，减去外边距 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 垂直对齐内容 */
 }
 
+.content-col .col-6.col-lg-4 .content-button {
+    margin-top: auto; /* 确保按钮在底部对齐 */
+}
+
+.content-col .col-6.col-lg-4:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 悬停时增强阴影效果 */
+}
+.lover-content {
+    text-align: center;
+    color: red;
+}
+
+/* 巨幕 */
 .jumbotron {
-    background-color: #00000034;
-    margin: 10px 10px;
-    padding: 20px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.container .button {
-    margin: 10px 10px;
-    background-color: #fff;
-    border: 2px solid #888;
+.jumbotron h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.jumbotron p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.jumbotron .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+}
+#hometownImages img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* 可选：增加图片之间的间距 */
+}
+
+
+/* 了解详细按钮样式 */
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+    background-color: #004a8c;
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .content-col {
+        margin-right: 0;
+        margin-bottom: 30px; /* 增加列之间的间距 */
+    }
+
+    .content-col .col-6.col-lg-4 {
+        flex-basis: 100%; /* 在小屏幕上每个方块占一行 */
+        margin: 10px 0; /* 调整上下外边距 */
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .content-col .col-6.col-lg-4 {
+        flex-basis: calc(50% - 20px); /* 在中等屏幕上每行两个方块 */
+        margin: 10px; /* 保持四周外边距 */
+    }
+
+    .button {
+        padding: 9px 18px;
+        font-size: 15px;
+    }
 }
