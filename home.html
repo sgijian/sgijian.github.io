@@ -5,16 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link href="css/bootstrap.css" rel="stylesheet">
-    <script src="js/jquery-3.3.1.js"></script>
+    <link href="image/favicon.ico" rel="shortcut icon">
+    <script src="js/jQuery.js"></script>
     <script src="js/bootstrap.js"></script>
     <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
+    <video autoplay muted loop class="video-background">
+        <source src="image/3.mp4" type="video/mp4">
+    </video>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">远风时光馆</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -23,8 +29,9 @@
                     <a class="nav-link" href="#">首页</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        库
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        游戏库
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">排行榜</a>
@@ -51,10 +58,10 @@
         <div class="jumbotron">
             <h1 class="display-4">远风时光馆</h1>
             <p class="lead">
-                前端开发是创建WEB页面或APP等前端界面呈现给用户的过程，通过HTML，CSS及JavaScript以及衍生出来的各种技术、框架、解决方案，来实现互联网产品的用户界面交互。前端开发从网页制作演变而来，名称上有很明显的时代特征。
+                远风时光馆是属于向立维的博客，这里储存着他的童年记忆和个人信息，或许你也可以在这里尝试体验他最喜欢的童年小游戏。
             </p>
             <div class="text-left">
-                <a href="#" class="btn btn-primary btn-lg">开始游戏</a>
+                <a href="dom.html" class="btn btn-primary btn-lg">留言</a>
             </div>
         </div>
     </div>
@@ -62,56 +69,274 @@
         <div class="content-col">
             <div class="row">
                 <div class="col-6 col-lg-4">
-                    <h2>贪吃蛇大作战</h2>
-                    <p>控制蛇吃食物变长，避免碰到自己的身体或边界，挑战更高的分数。
-                    </p>
+                    <h2>生平</h2>
+                    <p>尽管这只是一份预告，但他这一生，终将波澜壮阔。</p>
+                    <button class="button" onclick="showModal('#biographyModal')">了解详细</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <h2>故乡</h2>
+                    <p>吾生而为人，时感育吾山川之浩瀚，故乡之名，吾日夜不敢忘也。盐亭金孔，其景多壮丽，其人也善，乃吾乡尔。</p>
+                    <button class="button" onclick="showModal('#hometownModal')">了解详细</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <h2>恋人</h2>
+                    <p>愿我如星君如月，夜夜流光相皎洁</p>
+                    <button class="button" onclick="showModal('#loverModal')">了解详细</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <h2>贪吃蛇</h2>
+                    <p>贪吃蛇是一款经典的童年游戏，你需要控制蛇吃食物变长，避免碰到自己的身体或边界，挑战更高的分数。</p>
                     <a href="snake.html" class="btn btn-primary btn-lg">开始游戏</a>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <h2>CSS</h2>
-                    <p>层叠样式表(英文全称：Cascading Style
-                        Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。CSS不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。
-                    </p>
-                    <button class="button">开始学习</button>
+                    <h2>俄罗斯方块</h2>
+                    <p>经典消除游戏，通过旋转和移动不同形状的方块，填满每一行即可消除得分。</p>
+                    <a href="tetrus.html" class="btn btn-primary btn-lg">开始游戏</a>
                 </div>
                 <div class="col-6 col-lg-4">
-                    <h2>JavaScript</h2>
-                    <p>JavaScript（简称“JS”）
-                        是一种具有函数优先的轻量级，解释型或即时编译型的编程语言。虽然它是作为开发Web页面的脚本语言而出名，但是它也被用到了很多非浏览器环境中，JavaScript
-                        基于原型编程、多范式的动态脚本语言，并且支持面向对象、命令式、声明式、函数式编程范式。</p>
-                    <button class="button">开始学习</button>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <h2>jQuery</h2>
-                    <p>jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（框架）于2006年1月由John
-                        Resig发布。jQuery设计的宗旨是“write Less，Do
-                        More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。
-                    </p>
-                    <button class="button">开始学习</button>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <h2>HTML5</h2>
-                    <p>HTML5 是最新的 HTML 标准。 HTML5 是专门为承载丰富的 web 内容而设计的，并且无需额外插件。 HTML5 拥有新的语义、图形以及多媒体元素。 HTML5 提供的新元素和新的
-                        API 简化了 web 应用程序的搭建。 HTML5 是跨平台的，被设计为在不同类型的硬件（PC、平板、手机、电视机等等）之上运行。</p>
-                    <button class="button">开始学习</button>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <h2>综合案例</h2>
-                    <p>通过商业案例综合了前面所学知识，分步骤实现了一个电商网站的首页。包括页面的布局、导航栏、轮播图、页面详情内容等部分。</p>
-                    <button class="button">开始学习</button>
+                    <h2>像素跑酷</h2>
+                    <p>这是一款由向立维开发的一款像素风的跑酷小游戏，只不过它的制作还不完善，敬请期待。</p>
+                    <a href="run.html" class="btn btn-primary btn-lg">开始游戏</a>
                 </div>
             </div>
         </div>
         <div class="sidebar">
-            <ul>
-                <li><a href="#">最新作业</a></li>
-                <hr />
-                <li><a href="#">最新讨论</a></li>
-                <hr />
-                <li><a href="#">最新公告</a></li>
-            </ul>
+            <form id="messageForm">
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" class="form-control" id="name" placeholder="请输入您的姓名">
+                </div>
+                <div class="form-group">
+                    <label for="email">邮箱</label>
+                    <input type="email" class="form-control" id="email" placeholder="请输入您的邮箱">
+                </div>
+                <div class="form-group">
+                    <label for="message">留言</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="请输入您的留言"></textarea>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg" onclick="submitMessage()">提交</button>
+            </form>
         </div>
     </div>
-</body>
 
+    <!-- 模态框 -->
+    <div id="welcomeModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <div id="typedText"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="biographyModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="biographyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="biographyModalLabel">生平</h5>
+                </div>
+                <div class="modal-body">
+                    <div id="biographyContent"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-modal" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 故乡模态框 -->
+    <div id="hometownModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="hometownModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hometownModalLabel">故乡</h5>
+                </div>
+                <div class="modal-body">
+                    <div id="hometownContent"></div>
+                    <div id="hometownImages"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-modal" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 恋人模态框 -->
+    <div id="loverModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="loverModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loverModalLabel">恋人</h5>
+                </div>
+                <div class="modal-body">
+                    <div id="loverContent" class="lover-content">
+                        <i class="fas fa-heart fa-10x"></i>
+                        <br>
+                        向立维 & 蒋颖
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-modal" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#welcomeModal').modal('show');
+
+            const text1 = "你好，陌生人，很高兴见到你";
+            let index1 = 0;
+
+            function typeWriter1() {
+                if (index1 < text1.length) {
+                    document.getElementById("typedText").innerHTML += text1.charAt(index1);
+                    index1++;
+                    setTimeout(typeWriter1, 100); 
+                } else {
+
+                    setTimeout(eraseText1, 1500);
+                }
+            }
+
+            function eraseText1() {
+                if (index1 > 0) {
+                    document.getElementById("typedText").innerHTML = text1.substring(0, index1 - 1);
+                    index1--;
+                    setTimeout(eraseText1, 50); 
+                } else {
+                    setTimeout(typeWriter2, 1000);
+                }
+            }
+
+            const text2 = "欢迎访问我的博客";
+            let index2 = 0;
+
+            function typeWriter2() {
+                if (index2 < text2.length) {
+                    document.getElementById("typedText").innerHTML += text2.charAt(index2);
+                    index2++;
+                    setTimeout(typeWriter2, 100); 
+                } else {
+                    setTimeout(eraseText2, 1500);
+                }
+            }
+
+            function eraseText2() {
+                if (index2 > 0) {
+                    document.getElementById("typedText").innerHTML = text2.substring(0, index2 - 1);
+                    index2--;
+                    setTimeout(eraseText2, 50); 
+                } else {
+                    setTimeout(typeWriter3, 1000);
+                }
+            }
+
+            const text3 = "这里是远风时光馆——致我们逐渐遥远的青春与童年";
+            let index3 = 0;
+
+            function typeWriter3() {
+                if (index3 < text3.length) {
+                    document.getElementById("typedText").innerHTML += text3.charAt(index3);
+                    index3++;
+                    setTimeout(typeWriter3, 100); 
+                } else {
+                    setTimeout(closeModal, 2000);
+                }
+            }
+
+            function closeModal() {
+                $('#welcomeModal').modal('hide');
+            }
+
+            typeWriter1();
+
+            $('#biographyModal').on('shown.bs.modal', function () {
+                const initialContent = "就读于西南石油大学信息管理与信息系统专业。";
+                const additionalContent = "他的未来扑朔迷离，但愿他一生坦荡，不负爱与自由";
+
+                let index = 0;
+
+                function typeWriterBiography() {
+                    if (index < initialContent.length) {
+                        document.getElementById("biographyContent").innerHTML += initialContent.charAt(index);
+                        index++;
+                        setTimeout(typeWriterBiography, 100);
+                    } else {
+                        setTimeout(eraseInitialContent, 2000);
+                    }
+                }
+
+                function eraseInitialContent() {
+                    if (index > 0) {
+                        document.getElementById("biographyContent").innerHTML = initialContent.substring(0, index - 1);
+                        index--;
+                        setTimeout(eraseInitialContent, 50);
+                    } else {
+                        index = 0;
+                        setTimeout(typeWriterAdditional, 1000);
+                    }
+                }
+
+                function typeWriterAdditional() {
+                    if (index < additionalContent.length) {
+                        document.getElementById("biographyContent").innerHTML += additionalContent.charAt(index);
+                        index++;
+                        setTimeout(typeWriterAdditional, 100);
+                    }
+                }
+
+                typeWriterBiography();
+            });
+
+            $('#hometownModal').on('shown.bs.modal', function () {
+                document.getElementById("hometownContent").innerHTML = "四川省绵阳市盐亭县金孔镇，其山川多秀丽，号文化之乡，多保护单位，地处盐亭县东南部，东与嫘祖镇、西充县仁和镇相邻，南与嫘祖镇交界，西与高灯镇相连，北与西充县鸣龙镇，青狮镇接壤，是原金孔区区公所所在地";
+                const images = [
+                    '<img src="image/hometown1.jpg" alt="故乡图片1">',
+                    '<img src="image/hometown2.jpg" alt="故乡图片2">'
+                ];
+                document.getElementById("hometownImages").innerHTML = images.join('');
+            });
+
+            $('#loverModal').on('shown.bs.modal', function () {
+            });
+
+            function submitMessage() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                alert('请填写完整的信息');
+                return;
+            }
+
+            // 生成唯一 id
+            const timestamp = new Date().toISOString();
+            const id = `${name}_${timestamp}`;
+
+            // 将留言信息存储在 sessionStorage 中
+            const messageData = { id, name, email, message, timestamp };
+            sessionStorage.setItem(`message_${id}`, JSON.stringify(messageData));
+
+            // 跳转到留言箱页面
+            window.location.href = 'dom.html';
+        }
+
+        // 绑定按钮点击事件
+        $('#messageForm button').click(submitMessage);
+
+    });
+        function showModal(modalId) {
+                $(modalId).modal('show');
+            };
+            $('.close-modal').click(function() {
+    $(this).closest('.modal').modal('hide');
+});
+    </script>
+</body>
 </html>
